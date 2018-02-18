@@ -7,12 +7,15 @@
   <div class="col-12">
       <div class="list-group mb-5">
           <a *ngFor="let recipe of recipes" href="" class="list-group-item list-group-item-action flex-column align-items-start active">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">{{recipe.name}}</h5>
-              <small>3 days ago</small>
+            <div class="row">
+              <div class="col-9">
+                {{recipe.name}}
+                <div class="row">
+                  <div class="col-12">{{recipe.desc}}</div>
+                </div>
+              </div>
+              <div class="col-3"><img class="img-fluid" [src]="recipe.imagePath" height="100" width="100" alt=""></div>
             </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small>Donec id elit non mi porta.</small>
           </a>
         </div>
     <app-recipe-item></app-recipe-item>
